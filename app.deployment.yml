@@ -4,6 +4,7 @@ metadata:
   name: my-app
   labels:
     app: my-app
+    version: 2.0.0
 spec:
   replicas: 3
   selector:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app-flask
-        image: app-flask:latest
+        image: app-flask:2.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000

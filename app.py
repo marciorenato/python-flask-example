@@ -18,5 +18,10 @@ def counter():
     cont = cont+1
     return str(cont)
 
+    
+@app.route("/version")
+def version_route():
+    return "2.0.0"
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=os.environ["APP_PORT"], debug=True) 
